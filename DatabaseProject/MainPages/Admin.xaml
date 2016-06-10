@@ -1,0 +1,219 @@
+﻿<Window x:Class="DatabaseProject.Admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Admin" Height="600" Width="800">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Name="Title_Textblock" Text="教师信息管理" FontSize="30" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Button Click="Teacher_Management_button_Click" Name="Teacher_Management_button" Content="教师信息管理" Grid.Row="0" Height="50" Width="150" FontSize="20"/>
+                <Button Click="Student_Management_button_Click" Name="Student_Management_button" Content="学生信息管理" Grid.Row="1" Height="50" Width="150" FontSize="20"/>
+                <Button Click="Course_Management_button_Click" Name="Course_Management_button" Content="课程信息管理" Grid.Row="2" Height="50" Width="150" FontSize="20"/>
+                <Button Click="XML_button_Click" Name="XML_button" Content="XML导入导出" Grid.Row="3" Height="50" Width="150" FontSize="20"/>
+                <Button Click="SQL_button_Click_1" Name="SQL_button" Content="SQL查询" Grid.Row="4" Height="50" Width="150" FontSize="20"/>
+            </Grid>
+            <Grid Margin="20" Grid.Column="1">
+                <Grid Name="Teacher_Management_Grid" Visibility="Visible">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="ID：" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="18"/>
+                            <TextBlock Text="用户名：" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="18"/>
+                            <TextBox Name="Teacher_Search_ID" Grid.Column="1" Grid.Row="0" Height="25" FontSize="18"/>
+                            <TextBox Name="Teacher_Search_Name" Grid.Column="1" Grid.Row="1" Height="25" FontSize="18"/>
+                        </Grid>
+                        <Button Click="Teacher_Search_Button_Click" Content="查询" Grid.Column="2" FontSize="18" Height="30"/>
+                    </Grid>
+                    <ListView Grid.Row="1" Name="Teacher_ListView" Margin="10">
+                        <ListView.View>
+                            <GridView AllowsColumnReorder="False">
+                                <GridViewColumn Header="ID" Width="40" DisplayMemberBinding="{Binding Path=ID}"/>
+                                <GridViewColumn Header="用户名" Width="165" DisplayMemberBinding="{Binding Path=username}"/>
+                                <GridViewColumn Header="姓名" Width="165" DisplayMemberBinding="{Binding Path=nickname}"/>
+                                <GridViewColumn Header="密码（加密后）" Width="100" DisplayMemberBinding="{Binding Path=password}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Click="Teacher_Insert_Button_Click" Content="添加" Grid.Column="0" FontSize="16" Height="30" Width="100"/>
+                        <Button Click="Teacher_Update_Button_Click" Content="修改" Grid.Column="1" FontSize="16" Height="30" Width="100"/>
+                        <Button Click="Teacher_Remove_Button_Click" Content="删除" Grid.Column="2" FontSize="16" Height="30" Width="100"/>
+                    </Grid>
+                </Grid>
+                <Grid Name="Student_Management_Grid" Visibility="Hidden">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="ID：" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="18"/>
+                            <TextBlock Text="用户名：" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="18"/>
+                            <TextBox Name="Student_Search_ID" Grid.Column="1" Grid.Row="0" Height="25" FontSize="18"/>
+                            <TextBox Name="Student_Search_Name" Grid.Column="1" Grid.Row="1" Height="25" FontSize="18"/>
+                        </Grid>
+                        <Button Click="Student_Search_Button_Click" Content="查询" Grid.Column="2" FontSize="18" Height="30"/>
+                    </Grid>
+                    <ListView Grid.Row="1" Name="Student_ListView" Margin="10">
+                        <ListView.View>
+                            <GridView AllowsColumnReorder="False">
+                                <GridViewColumn Header="ID" Width="40" DisplayMemberBinding="{Binding Path=ID}"/>
+                                <GridViewColumn Header="用户名" Width="165" DisplayMemberBinding="{Binding Path=username}"/>
+                                <GridViewColumn Header="姓名" Width="165" DisplayMemberBinding="{Binding Path=nickname}"/>
+                                <GridViewColumn Header="密码（加密后）" Width="100" DisplayMemberBinding="{Binding Path=password}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Click="Student_Insert_Button_Click" Content="添加" Grid.Column="0" FontSize="16" Height="30" Width="100"/>
+                        <Button Click="Student_Update_Button_Click" Content="修改" Grid.Column="1" FontSize="16" Height="30" Width="100"/>
+                        <Button Click="Student_Remove_Button_Click" Content="删除" Grid.Column="2" FontSize="16" Height="30" Width="100"/>
+                    </Grid>
+                </Grid>
+                <Grid Name="Course_Management_Grid" Visibility="Hidden">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="120"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="ID：" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="18"/>
+                            <TextBlock Text="课程名：" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="18"/>
+                            <TextBlock Text="教师ID：" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="18"/>
+                            <TextBlock Text="教师名：" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="18"/>
+                            <TextBox Name="Course_Search_ID" Grid.Column="1" Grid.Row="0" Height="25" FontSize="18"/>
+                            <TextBox Name="Course_Search_Name" Grid.Column="1" Grid.Row="1" Height="25" FontSize="18"/>
+                            <TextBox Name="Course_Teacher_Search_ID" Grid.Column="1" Grid.Row="2" Height="25" FontSize="18"/>
+                            <TextBox Name="Course_Teacher_Search_Name" Grid.Column="1" Grid.Row="3" Height="25" FontSize="18"/>
+                        </Grid>
+                        <Button Click="Course_Search_Button_Click" Content="查询" Grid.Column="1" FontSize="18" Height="50" Margin="10 0 0 0"/>
+                    </Grid>
+                    <ListView Grid.Row="1" Name="Course_ListView" Margin="10">
+                        <ListView.View>
+                            <GridView AllowsColumnReorder="False">
+                                <GridViewColumn Header="ID" Width="30" DisplayMemberBinding="{Binding Path=ID}"/>
+                                <GridViewColumn Header="课程名" Width="190" DisplayMemberBinding="{Binding Path=name}"/>
+                                <GridViewColumn Header="开课教师ID" Width="70" DisplayMemberBinding="{Binding Path=teachers_ID}"/>
+                                <GridViewColumn Header="开课教师用户名" Width="90" DisplayMemberBinding="{Binding Path=username}"/>
+                                <GridViewColumn Header="开课教师姓名" Width="90" DisplayMemberBinding="{Binding Path=nickname}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button Click="Course_Insert_Button_Click" Content="添加" Grid.Column="0" FontSize="16" Height="30" Width="100"/>
+                        <Button Click="Course_Update_Button_Click" Content="修改" Grid.Column="1" FontSize="16" Height="30" Width="100"/>
+                        <Button Click="Course_Remove_Button_Click" Content="删除" Grid.Column="2" FontSize="16" Height="30" Width="100"/>
+                    </Grid>
+                </Grid>
+                <Grid Name="XML_Grid" Visibility="Hidden">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="从XML导入数据" Grid.Row="0" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Button Name="XML_In_Button" Click="XML_In_Button_Click" Content="选择文件" Grid.Row="1" FontSize="20" VerticalAlignment="Center" HorizontalContentAlignment="Center" Height="50" Width="150"/>
+                    <TextBlock Grid.Row="2" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"><Run Text="导出数据"/><Run Text="到"/><Run Text="XML"/></TextBlock>
+                    <Button Name="XML_Out_Button" Click="XML_Out_Button_Click" Content="选择文件" Grid.Row="3" FontSize="20" VerticalAlignment="Center" HorizontalContentAlignment="Center" Height="50" Width="150"/>
+                </Grid>
+                <Grid Name="SQL_Grid" Visibility="Hidden">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="5*"/>
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Name="Sql_Input" Text="SELECT * FROM teachers" Grid.Column="0" TextWrapping="Wrap" AcceptsReturn="True"/>
+                        <Button Click="Sql_Button_Click" Grid.Column="1" Content="执行" FontSize="20" Margin="10 0 0 0"/>
+                    </Grid>
+                    <ListView Grid.Row="1" Name="Sql_ListView" Margin="10">
+                        <ListView.View>
+                            <GridView AllowsColumnReorder="False">
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

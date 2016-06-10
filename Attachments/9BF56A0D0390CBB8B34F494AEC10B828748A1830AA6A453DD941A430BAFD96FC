@@ -1,0 +1,109 @@
+<root>
+  <admins>
+    <row ID="1" username="111" password="96CAE35CE8A9B0244178BF28E4966C2CE1B8385723A96A6B838858CDD6CA0A1E" nickname="张三" />
+    <row ID="2" username="2" password="96CAE35CE8A9B0244178BF28E4966C2CE1B8385723A96A6B838858CDD6CA0A1E" nickname="三张" />
+    <row ID="3" username="3" password="96CAE35CE8A9B0244178BF28E4966C2CE1B8385723A96A6B838858CDD6CA0A1E" nickname="www" />
+    <row ID="4" username="1" password="BCB15F821479B4D5772BD0CA866C00AD5F926E3580720659CC80D39C9D09802A" nickname="null" />
+  </admins>
+  <students>
+    <row ID="1" username="111" password="BCB15F821479B4D5772BD0CA866C00AD5F926E3580720659CC80D39C9D09802A" nickname="吃饭" />
+    <row ID="2" username="222" password="BCB15F821479B4D5772BD0CA866C00AD5F926E3580720659CC80D39C9D09802A" nickname="睡觉" />
+    <row ID="3" username="333" password="BCB15F821479B4D5772BD0CA866C00AD5F926E3580720659CC80D39C9D09802A" nickname="打豆豆" />
+    <row ID="4" username="1e1e1e" password="BCB15F821479B4D5772BD0CA866C00AD5F926E3580720659CC80D39C9D09802A" nickname="姓名" />
+    <row ID="5" username="12321" password="BCB15F821479B4D5772BD0CA866C00AD5F926E3580720659CC80D39C9D09802A" nickname="再看" />
+    <row ID="6" username="55555" password="BCB15F821479B4D5772BD0CA866C00AD5F926E3580720659CC80D39C9D09802A" nickname="balala" />
+    <row ID="7" username="lyw" password="8D969EEF6ECAD3C29A3A629280E686CF0C3F5D5A86AFF3CA12020C923ADC6C92" nickname="李英伟" />
+  </students>
+  <teachers>
+    <row ID="1" username="111" password="BCB15F821479B4D5772BD0CA866C00AD5F926E3580720659CC80D39C9D09802A" nickname="赵一鸣" />
+    <row ID="2" username="123" password="BCB15F821479B4D5772BD0CA866C00AD5F926E3580720659CC80D39C9D09802A" nickname="找耳鸣" />
+    <row ID="3" username="321" password="BCB15F821479B4D5772BD0CA866C00AD5F926E3580720659CC80D39C9D09802A" nickname="找三名" />
+    <row ID="4" username="222" password="BCB15F821479B4D5772BD0CA866C00AD5F926E3580720659CC80D39C9D09802A" nickname="赵思明" />
+    <row ID="5" username="333" password="BCB15F821479B4D5772BD0CA866C00AD5F926E3580720659CC80D39C9D09802A" nickname="赵无名" />
+    <row ID="6" username="qqq111" password="BCB15F821479B4D5772BD0CA866C00AD5F926E3580720659CC80D39C9D09802A" nickname="找刘明" />
+    <row ID="7" username="987987" password="BCB15F821479B4D5772BD0CA866C00AD5F926E3580720659CC80D39C9D09802A" nickname="赵启明" />
+  </teachers>
+  <courses>
+    <row ID="1" name="现代吃饭基础" teachers_ID="2" />
+    <row ID="2" name="低等数学" teachers_ID="1" />
+    <row ID="3" name="再见，世界" teachers_ID="3" />
+    <row ID="4" name="COMP221300.15 玩手机" teachers_ID="4" />
+    <row ID="5" name="田中谦介缅怀录" teachers_ID="5" />
+    <row ID="6" name="起名的哲学" teachers_ID="7" />
+    <row ID="7" name="九年制海军学院高等课程" teachers_ID="5" />
+    <row ID="8" name="深海棲舰的攻击模式解析" teachers_ID="5" />
+    <row ID="9" name="电探研发玄学" teachers_ID="5" />
+    <row ID="10" name="阵型选择，装备搭配，与编队艺术" teachers_ID="5" />
+    <row ID="11" name="深海栖姬的捕捉与养殖指南" teachers_ID="5" />
+    <row ID="12" name="中等数学" teachers_ID="1" />
+    <row ID="13" name="连续数学" teachers_ID="1" />
+    <row ID="14" name="高级吃饭学" teachers_ID="2" />
+  </courses>
+  <students_has_courses>
+    <row students_ID="1" courses_ID="1" />
+    <row students_ID="7" courses_ID="1" />
+    <row students_ID="1" courses_ID="2" />
+    <row students_ID="2" courses_ID="2" />
+    <row students_ID="3" courses_ID="2" />
+  </students_has_courses>
+  <homeworks>
+    <row ID="1" time="2016/5/22 1:00:00" title="早饭" content="早饭没得吃" totalscore="10" courses_ID="1" />
+    <row ID="2" time="2016/5/22 17:53:43" title="+怎么念" content="" totalscore="1" courses_ID="2" />
+    <row ID="3" time="2016/5/22 1:00:01" title="中饭" content="中饭没得吃" totalscore="10" courses_ID="1" />
+    <row ID="4" time="9999/12/31 23:59:59" title="数字怎么念" content="1fbeigbaivfbai ndsi fbdsif ndasifkdsfdsn dsf dasuifds fdffdsnfidsufndsifudsbfidsbfdjsfndsokl fnf oifjdsofdosfbndsfbdsfbdosfbdosfdosfdosfbodsbfdosbfdosbfdsbfkdjsffndisfndaisfbuisbf dsfbdisk nfdsinfdisfdnsfdsfndsinfdisnfdisfndisbfi sbf ds fkjdskf dskfh dis fdsof hkas fdksaj fdkasj fhdskj fhds fdsof dskjf ndklsa fkldas fdkas nfldas fjdlasfkjbhdaskfjbdlsjvhb ldfvjhbdfvavdfv df vdf dvf df df df df df df df " totalscore="100" courses_ID="2" />
+    <row ID="5" time="2016/6/20 0:00:00" title="-怎么念" content="-------" totalscore="1" courses_ID="2" />
+    <row ID="6" time="2016/6/28 0:00:00" title="*怎么念" content="" totalscore="1" courses_ID="2" />
+    <row ID="100" time="2016/2/22 1:00:02" title="晚饭" content="晚饭也没得吃" totalscore="80" courses_ID="1" />
+    <row ID="101" time="2014/4/28 10:00:00" title="2014 春季" content="一周年！！    &#xD;&#xA;2014春季*4   &#xD;&#xA;爱的佛啊但是佛单发 浓缩的那份都是放的石佛寺反杀发生发顺丰打开了说发登陆时法轮大法代课老师辅导课老师打开了说发没打开了说发考了多少辅导课老师付款了辅导课老师发生辅导课老师发发&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;都是房东鞍山发生辅导费多拉风米多快乐送没法度搜发动克里斯发动奥斯卡免费的克里斯发生 法轮大法考了多少否暗杀费点开始能翻到可使肌肤开始打你付款的设计费你打开就是代课教师非的会计师" totalscore="1" courses_ID="5" />
+    <row ID="102" time="2014/8/15 16:01:28" title="2014 夏" content="哇 两个！&#xD;&#xA;超大*6" totalscore="10" courses_ID="5" />
+    <row ID="103" time="2014/11/1 10:00:00" title="2014秋" content="啊啊啊啊啊啊啊啊啊&#xD;&#xA;真爽&#xD;&#xA;太强了 太水了，断货一年预定" totalscore="1" courses_ID="5" />
+    <row ID="104" time="2015/1/31 10:00:00" title="2015 冬" content="这卡牙齿的石头是啥&#xD;&#xA;做人没有赤石的梦想，连咸鱼都不如" totalscore="10" courses_ID="5" />
+    <row ID="105" time="2015/4/20 10:00:00" title="2015 春" content="上次太硬了？&#xD;&#xA;这次软一点，就这么决定了" totalscore="1" courses_ID="5" />
+    <row ID="106" time="2015/8/20 10:00:00" title="2015 夏" content="找回爽的感觉吧（住院&#xD;&#xA;实心打造，上下开弓，听说你想当big7" totalscore="10" courses_ID="5" />
+    <row ID="107" time="2015/11/8 10:00:00" title="2015 秋" content="一季简单一季难&#xD;&#xA;24h还是一件很累的事情" totalscore="10" courses_ID="5" />
+    <row ID="108" time="2016/2/1 10:00:00" title="2016 冬" content="什么？好水&#xD;&#xA;讲道理，一上一下才是正道" totalscore="10" courses_ID="5" />
+    <row ID="109" time="2016/6/1 10:00:00" title="2016 春" content="大家争当七咸者&#xD;&#xA;自杀式袭击三周年很厉害" totalscore="10" courses_ID="5" />
+    <row ID="110" time="9999/12/31 23:59:59" title="起飞了" content="从2015年的夏天缓缓起飞。&#xD;&#xA;现在已经飞到哪里了呢？&#xD;&#xA;月球，还是其他的地方&#xD;&#xA;最终，还是会飞走的，让人安心" totalscore="10000" courses_ID="5" />
+    <row ID="112" time="9999/12/31 23:59:59" title="New Homework" content="qwrfffwfewfewfewfewfewfewf 32 423 345 3 6546 54 654 ''';';';';'l/e fa g   kl/;l/jvk,cghm;l'';l'&#xD;&#xA;';k/.kl;l';;l/kj,xg dzg drg &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;4&#xD;&#xA;&#xD;&#xA;54&#xD;&#xA;542&#xD;&#xA;2&#xD;&#xA;13&#xD;&#xA;22&#xD;&#xA;56&#xD;&#xA;13&#xD;&#xA;136158&#xD;&#xA;4&#xD;&#xA;136131&#xD;&#xA;14&#xD;&#xA;1" totalscore="100" courses_ID="2" />
+    <row ID="113" time="2016/6/3 0:00:00" title="123+456=？" content="" totalscore="100" courses_ID="2" />
+    <row ID="114" time="9999/12/31 23:59:59" title="花式吃饭" content="在公众场合尝试一种新的吃饭方法&#xD;&#xA;并拍照或上传视频" totalscore="1" courses_ID="14" />
+  </homeworks>
+  <homework_entities>
+    <row ID="1" text="" score="0" comment="" is_submitted="0" is_returned="0" homeworks_ID="1" students_ID="1" />
+    <row ID="2" text="" score="0" comment="" is_submitted="0" is_returned="0" homeworks_ID="3" students_ID="1" />
+    <row ID="3" text="" score="0" comment="" is_submitted="0" is_returned="0" homeworks_ID="100" students_ID="1" />
+    <row ID="4" text="+++++++ 加" score="1" comment="知道怎么念，这是坠吼的" is_submitted="1" is_returned="1" homeworks_ID="2" students_ID="1" />
+    <row ID="5" text="" score="0" comment="" is_submitted="0" is_returned="0" homeworks_ID="4" students_ID="1" />
+    <row ID="6" text="-------减" score="1" comment="好好好 啊啊&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;dfds放&#xD;&#xA; &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;fdsfdsfds&#xD;&#xA;fs水电费水电费是是啊第三方&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA; 的   &#xD;&#xA;地方地方地方地方地方地方地方&#xD;&#xA;但是" is_submitted="1" is_returned="1" homeworks_ID="5" students_ID="1" />
+    <row ID="7" text="*****" score="1" comment="" is_submitted="1" is_returned="1" homeworks_ID="6" students_ID="1" />
+    <row ID="8" text="" score="0" comment="" is_submitted="0" is_returned="0" homeworks_ID="2" students_ID="2" />
+    <row ID="9" text="" score="0" comment="" is_submitted="0" is_returned="0" homeworks_ID="4" students_ID="2" />
+    <row ID="10" text="" score="0" comment="" is_submitted="0" is_returned="0" homeworks_ID="5" students_ID="2" />
+    <row ID="11" text="" score="0" comment="" is_submitted="0" is_returned="0" homeworks_ID="6" students_ID="2" />
+    <row ID="12" text="" score="0" comment="" is_submitted="0" is_returned="0" homeworks_ID="2" students_ID="3" />
+    <row ID="13" text="" score="0" comment="" is_submitted="0" is_returned="0" homeworks_ID="4" students_ID="3" />
+    <row ID="14" text="" score="0" comment="" is_submitted="0" is_returned="0" homeworks_ID="5" students_ID="3" />
+    <row ID="15" text="" score="0" comment="" is_submitted="0" is_returned="0" homeworks_ID="6" students_ID="3" />
+    <row ID="16" text="你在说啥子啊" score="0" comment="你傻逼吗" is_submitted="1" is_returned="1" homeworks_ID="112" students_ID="1" />
+    <row ID="17" text="" score="0" comment="" is_submitted="0" is_returned="0" homeworks_ID="112" students_ID="2" />
+    <row ID="18" text="" score="0" comment="" is_submitted="0" is_returned="0" homeworks_ID="112" students_ID="3" />
+    <row ID="19" text="789" score="20" comment="" is_submitted="1" is_returned="1" homeworks_ID="113" students_ID="1" />
+    <row ID="20" text="" score="0" comment="" is_submitted="0" is_returned="0" homeworks_ID="113" students_ID="2" />
+    <row ID="21" text="" score="0" comment="" is_submitted="0" is_returned="0" homeworks_ID="113" students_ID="3" />
+    <row ID="22" text="我早晨吃的包子！" score="0" comment="我也吃的包子，并没有看到你。" is_submitted="1" is_returned="1" homeworks_ID="1" students_ID="7" />
+    <row ID="23" text="" score="0" comment="" is_submitted="1" is_returned="0" homeworks_ID="3" students_ID="7" />
+    <row ID="24" text="哦" score="0" comment="" is_submitted="1" is_returned="0" homeworks_ID="100" students_ID="7" />
+  </homework_entities>
+  <homework_attachments>
+    <row ID="5" attachment="9A26484BB5E0DAD0DB451F80AF23710393FCBF53598D968EA1959BC94CB96F26" filename="DatabaseProject.sln" homeworks_ID="4" />
+    <row ID="7" attachment="40ACD49BC88C34ADD46B35B0D702CFE32C61DFD6C1A2A3B832023F661D7AAB88" filename="a.xml" homeworks_ID="4" />
+    <row ID="8" attachment="6F64DE29C1621D89EB72C2BCBFBA542F7662C9CB40979BF87AF7A34105869C43" filename="a.xml" homeworks_ID="114" />
+  </homework_attachments>
+  <homework_entity_attachments>
+    <row ID="2" attachment="D090B82F0C185EBD378B0FE513D0E27790482D7CAB72B00AB05C935C286A91E1" filename="a.xml" homework_entities_ID="6" />
+    <row ID="3" attachment="A2D0E35A6AD8E7BEAC8B72F3CC4AA990DD1B64DC416ECFE7E7958B76D4A909A1" filename="a.xml" homework_entities_ID="4" />
+    <row ID="4" attachment="982599DA33C7DA7659C12417EA0C59541FD7CBA1B5A09D1B3AD2F2FDAF4DFC2C" filename="a.xml" homework_entities_ID="19" />
+    <row ID="5" attachment="2046950DD48A75208BAFAB17CCBFAC2BF1F53DE51538EF5D732E32532D895AB9" filename="a.xml" homework_entities_ID="22" />
+    <row ID="6" attachment="C6EE550B5EB11D1454BD4B7AC94E4F1DD219F0B06CFCBB2CF810AB6C3288DC50" filename="a.xml" homework_entities_ID="22" />
+  </homework_entity_attachments>
+</root>

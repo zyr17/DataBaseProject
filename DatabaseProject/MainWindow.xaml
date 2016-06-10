@@ -1,0 +1,112 @@
+﻿<Window x:Class="DatabaseProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="作业提交系统" Height="350" Width="525" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Name="MainWindows_Title" Grid.Row="0" Text="用户登录" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+            <Grid Name="Login_Grid" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="6*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="用户名" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBox Name="Login_Username" Grid.Column="1" Text="" Height="18px" MaxLength="64"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="6*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="密码" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <PasswordBox Name="Login_Password" Grid.Column="1" Password="" Height="18px"/>
+                </Grid>
+            </Grid>
+            <Grid Name="Register_Grid" Grid.Row="1" Visibility="Hidden">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="6*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="用户名" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBox Name="Register_Username" Grid.Column="1" Text="" Height="18px" MaxLength="64"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="6*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="姓名" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBox Name="Register_Nickname" Grid.Column="1" Text="" Height="18px" MaxLength="10"/>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="6*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="密码" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <PasswordBox Name="Register_Password" Grid.Column="1" Password="" Height="18px"/>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="6*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="确认密码" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <PasswordBox Name="Register_Password_Confirm" Grid.Column="1" Password="" Height="18px"/>
+                </Grid>
+            </Grid>
+            <TextBlock Grid.Row="2" Text="选择身份" TextAlignment="Center" VerticalAlignment="Center"/>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <RadioButton Name="Student_RadioButton" Content="学生" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <RadioButton Name="Teacher_RadioButton" Content="老师" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <RadioButton Name="Admin_RadioButton" Content="管理员" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="8*"/>
+                </Grid.ColumnDefinitions>
+                <Button Name="Login_Button" Grid.Column="0" Content="登录" Click="Login_Button_Click"/>
+                <Button Name="Register_Button" Grid.Column="0" Content="注册" Visibility="Hidden" Click="Register_Button_Click"/>
+                <Button Name="Register_Show_Button" Grid.Column="2" Content="新学生注册" Click="Register_Show_Button_Click"/>
+                <Button Name="Login_Show_Button" Grid.Column="2" Content="返回登录" Visibility="Hidden" Click="Login_Show_Button_Click"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,45 @@
+﻿<Window xmlns:DatabaseProject="clr-namespace:DatabaseProject"  x:Class="DatabaseProject.Teacher_Homework_Entities_Detail"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Teacher_Homework_Entities_Detail" Height="600" Width="800">
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="作业内容详情" Grid.Column="0" Grid.Row="0" FontSize="30" VerticalAlignment="Center"/>
+        <TextBlock Text="学生完成情况" Grid.Column="1" Grid.Row="0" FontSize="30" VerticalAlignment="Center"/>
+        <Grid Grid.Column="0" Grid.Row="1" Margin="0 0 20 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="0" Grid.Row="0">
+                <ScrollViewer>
+                    <StackPanel>
+                        <TextBlock Text="作业标题：" FontSize="16"/>
+                        <TextBlock Name="Homework_Title_TextBlock" Text="Homework_Title" FontSize="16" Margin="10 0 10 0" TextWrapping="Wrap"/>
+                        <TextBlock Text="作业时间：" FontSize="16"/>
+                        <TextBlock Name="Homework_Time_TextBlock" Text="Homework_Time" FontSize="16" Margin="10 0 10 0" TextWrapping="Wrap"/>
+                        <TextBlock Text="作业总分：" FontSize="16"/>
+                        <TextBlock Name="Homework_Score_TextBlock" Text="Homework_Score" FontSize="16" Margin="10 0 10 0" TextWrapping="Wrap"/>
+                        <TextBlock Text="作业内容：" FontSize="16"/>
+                        <TextBlock Name="Homework_Content_TextBlock" Text="Homework_Content" FontSize="16" Margin="10 0 10 0" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+            <Button Click="Edit_Homework_Button_Click" Content="修改作业信息" Grid.Row="1" FontSize="16" Margin="0 5 0 5"/>
+            <DatabaseProject:Attachment_Control x:Name="Homework_Attachment" Grid.Row="2"/>
+        </Grid>
+        <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Grid.Row="1">
+            <ScrollViewer>
+                <StackPanel Name="Homework_Entities_StackPanel" CanVerticallyScroll="True"/>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,34 @@
+﻿<Window x:Class="DatabaseProject.New_Course"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="New_Course" Height="500" Width="400">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <TextBlock Name="Title_TextBlock" Text="新建课程" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25"/>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="教师ID：" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="18" Grid.Row="0" Grid.Column="0"/>
+            <TextBlock Text="用户名：" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="18" Grid.Row="1" Grid.Column="0"/>
+            <TextBlock Text="教师姓名：" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="18" Grid.Row="2" Grid.Column="0"/>
+            <TextBlock Text="课程名称：" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="18" Grid.Row="3" Grid.Column="0"/>
+            <TextBlock Name="Teacher_UserName_TextBlock" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="18" Grid.Row="1" Grid.Column="1"/>
+            <TextBlock Name="Teacher_NickName_TextBlock" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="18" Grid.Row="2" Grid.Column="1"/>
+            <TextBox Name="Teacher_ID_TextBox" VerticalAlignment="Center" FontSize="18" Grid.Row="0" Grid.Column="1" Margin="0 0 10 0" TextChanged="Teacher_ID_TextBox_TextChanged"/>
+            <TextBox Name="Course_Name_TextBox" VerticalAlignment="Center" FontSize="18" Grid.Row="3" Grid.Column="1" Margin="0 0 10 0"/>
+        </Grid>
+        <Button Click="Button_Click" Content="确认" Margin="10" FontSize="20" Grid.Row="2"/>
+    </Grid>
+</Window>
